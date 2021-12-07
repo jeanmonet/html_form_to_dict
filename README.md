@@ -22,7 +22,7 @@ def test_foo(client):
     assert data == {'city': 'Chemnitz', 'name': 'Mr. X'}
     data['name']='Mrs. Y'
     data.submit(client)
-    assert resonse.status == 302, response.context['form'].errors
+    assert response.status == 302, response.context['form'].errors
 ```
 
 Above code uses pytest-django. See [client fixture](https://pytest-django.readthedocs.io/en/latest/helpers.html#client-django-test-client)
